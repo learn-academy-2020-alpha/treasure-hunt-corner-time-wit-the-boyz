@@ -14,3 +14,25 @@
     margin: 0 auto;
 
 }
+
+h1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#guess {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
