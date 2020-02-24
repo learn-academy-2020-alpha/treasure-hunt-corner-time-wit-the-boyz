@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 class Square extends Component{
 
   handleClick = () => {
-    this.props.handleLocation(this.props.index)
+      if (this.props.status === "") {
+          if (this.props.handleLocation(this.props.index, this.props.value)) {
+              this.setState({board: 'treasure'})
+          }
+
+
+    }
   }
   render(){
     return(

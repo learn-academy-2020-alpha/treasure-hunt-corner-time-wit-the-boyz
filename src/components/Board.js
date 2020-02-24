@@ -11,31 +11,42 @@ class Board extends Component {
             bomb: null,
             tree: null,
             counter: 5,
-            isWinner: ""
+            isWinner: "",
+            status: ""
 
         }
     }
 
     countRemaining = () => {
+        if (this.state.status === "") {
         let counter = this.state.counter
         this.setState({counter: counter -1})
         if(this.state.counter <= 1) {
-            alert("YOU DONE F'D UP")
-            window.location.reload()
+            this.setState({status: "YE MADE MISTAKES, MATEY"})
         }
+    }
     }
 
     onClickReload = () => {
         window.location.reload()
     }
 
-    handleLocation = (index) => {
+    handleLocation = (index, value) => {
+        console.log(value)
         let {shown, board} = this.state
         shown[index] = board[index]
         this.setState({
             shown: shown,
             board: board,
         })
+        if (this.state.shown[index] === "💰") {
+            this.setState({status: "AH Ye found me secret treasure!"})
+        } else if (this.state.shown[index] === "💣") {
+            this.setState({status: "ITS A TRAP! Try again! "})
+        }
+
+
+
     }
 
 
@@ -58,6 +69,7 @@ class Board extends Component {
                     handleLocation = {this.handleLocation}
                     index = {index}
                     value = {value}
+                    status = {this.state.status}
                 />
             )
         })
@@ -67,7 +79,10 @@ class Board extends Component {
             <div id = "guess"> Remaining guesses: {this.state.counter}</div>
             <div id= "board" onClick={this.countRemaining}>
             { square }
-            <button onClick= {this.onClickReload}>RESET YE GAME</button>
+            <button onClick= {this.onClickReload}><p className= "text"> RESET YE GAME </p> </button>
+            </div>
+            <div>
+            <h1>{this.state.status}</h1>
             </div>
         </div>
         )
