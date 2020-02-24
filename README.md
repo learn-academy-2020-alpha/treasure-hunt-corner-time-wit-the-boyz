@@ -10,10 +10,10 @@ This project was created in ReactJs, and with that, a lot of repos are required 
 
 First up, you'll need to clone the project over to your local environment. This should be a simple process, however just incase, heres some basic commands to get 'er done.
 
-1: Grab the URL from Github
-2: Create a directory you can easily access on your computer that we will clone into.
-3: Open your command prompt
-4: Run the following command
+1. Grab the URL from Github
+2. Create a directory you can easily access on your computer that we will clone into.
+3. Open your command prompt
+4. Run the following command
 
 ```Bash
 git clone <url here>
@@ -21,8 +21,8 @@ git clone <url here>
 
 Next, you'll need to install the React repo's into the directory.
 
-1: cd into your newly created clone directory.
-2: Run the following command inside of the directory from your command line
+1. cd into your newly created clone directory.
+2. Run the following command inside of the directory from your command line
 
 ```Bash
 yarn
@@ -56,7 +56,7 @@ We're stoked if you want to make changes to this code, or if you want to build u
 
 ## Just incasies
 
-We've included the instructions on what our goals were during this project below
+###We've included the instructions on what our goals were during this project below
 ---
 ## Remember:
 - Pseudocode!!
