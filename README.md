@@ -56,7 +56,7 @@ We're stoked if you want to make changes to this code, or if you want to build u
 
 ## Just incasies
 
-We've included the instructions on what our goals were during this project below
+###We've included the instructions on what our goals were during this project below
 ---
 ## Remember:
 - Pseudocode!!
